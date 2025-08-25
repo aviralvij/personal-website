@@ -1,0 +1,328 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CYBERPUNK DYSTOPIAN DESIGN SYSTEM - DIGITAL REBELLION */
+
+@layer base {
+  :root {
+    /* Core Colors - Dystopian Dark Palette */
+    --background: 220 13% 8%;
+    --foreground: 120 100% 85%;
+
+    --card: 220 13% 11%;
+    --card-foreground: 120 100% 85%;
+
+    --popover: 220 13% 11%;
+    --popover-foreground: 120 100% 85%;
+
+    /* Primary - Neon Green */
+    --primary: 120 100% 50%;
+    --primary-foreground: 220 13% 8%;
+    --primary-hover: 120 100% 45%;
+
+    /* Secondary - Electric Blue */
+    --secondary: 180 100% 15%;
+    --secondary-foreground: 180 100% 70%;
+
+    /* Muted Colors */
+    --muted: 220 13% 15%;
+    --muted-foreground: 120 20% 60%;
+
+    /* Accent - Toxic Yellow */
+    --accent: 54 100% 50%;
+    --accent-foreground: 220 13% 8%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 220 13% 8%;
+
+    --border: 120 50% 20%;
+    --input: 220 13% 15%;
+    --ring: 120 100% 50%;
+
+    --radius: 0.125rem;
+
+    /* Cyberpunk Design Tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(120 100% 50%), hsl(180 100% 50%), hsl(54 100% 50%));
+    --subtle-gradient: linear-gradient(180deg, hsl(220 13% 8%), hsl(220 13% 12%));
+    --card-gradient: linear-gradient(145deg, hsl(220 13% 11%), hsl(220 13% 9%));
+    --terminal-gradient: linear-gradient(90deg, hsl(120 100% 50% / 0.1), hsl(180 100% 50% / 0.1));
+    --glitch-gradient: linear-gradient(45deg, hsl(0 100% 50%), hsl(300 100% 50%), hsl(120 100% 50%));
+    
+    /* Neon Shadows & Glows */
+    --shadow-soft: 0 2px 10px -3px hsl(120 100% 50% / 0.3);
+    --shadow-medium: 0 4px 20px -4px hsl(120 100% 50% / 0.4);
+    --shadow-strong: 0 10px 40px -10px hsl(120 100% 50% / 0.6);
+    --shadow-glow: 0 0 40px hsl(120 100% 50% / 0.7);
+    --shadow-blue-glow: 0 0 30px hsl(180 100% 50% / 0.5);
+    --shadow-yellow-glow: 0 0 25px hsl(54 100% 50% / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Enhanced Cyberpunk Dark Mode */
+    --background: 220 13% 5%;
+    --foreground: 120 100% 90%;
+
+    --card: 220 13% 8%;
+    --card-foreground: 120 100% 90%;
+
+    --popover: 220 13% 8%;
+    --popover-foreground: 120 100% 90%;
+
+    --primary: 120 100% 55%;
+    --primary-foreground: 220 13% 5%;
+    --primary-hover: 120 100% 60%;
+
+    --secondary: 180 100% 12%;
+    --secondary-foreground: 180 100% 80%;
+
+    --muted: 220 13% 12%;
+    --muted-foreground: 120 30% 70%;
+
+    --accent: 54 100% 55%;
+    --accent-foreground: 220 13% 5%;
+
+    --destructive: 0 100% 55%;
+    --destructive-foreground: 220 13% 5%;
+
+    --border: 120 50% 25%;
+    --input: 220 13% 12%;
+    --ring: 120 100% 55%;
+
+    /* Enhanced Dark Cyberpunk Tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(120 100% 55%), hsl(180 100% 55%), hsl(54 100% 55%));
+    --subtle-gradient: linear-gradient(180deg, hsl(220 13% 5%), hsl(220 13% 10%));
+    --card-gradient: linear-gradient(145deg, hsl(220 13% 8%), hsl(220 13% 6%));
+    --terminal-gradient: linear-gradient(90deg, hsl(120 100% 50% / 0.15), hsl(180 100% 50% / 0.15));
+    --glitch-gradient: linear-gradient(45deg, hsl(0 100% 55%), hsl(300 100% 55%), hsl(120 100% 55%));
+    
+    --shadow-soft: 0 2px 10px -3px hsl(120 100% 50% / 0.4);
+    --shadow-medium: 0 4px 20px -4px hsl(120 100% 50% / 0.5);
+    --shadow-strong: 0 10px 40px -10px hsl(120 100% 50% / 0.7);
+    --shadow-glow: 0 0 50px hsl(120 100% 50% / 0.8);
+    --shadow-blue-glow: 0 0 40px hsl(180 100% 50% / 0.6);
+    --shadow-yellow-glow: 0 0 35px hsl(54 100% 50% / 0.5);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+}
+
+@layer components {
+  /* Cyberpunk Hero Styles */
+  .hero-title {
+    background: var(--hero-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 10px hsl(120 100% 50% / 0.5));
+    animation: textGlow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes textGlow {
+    from { filter: drop-shadow(0 0 5px hsl(120 100% 50% / 0.5)); }
+    to { filter: drop-shadow(0 0 15px hsl(120 100% 50% / 0.8)); }
+  }
+
+  /* Terminal/HUD Card Effect */
+  .glass-card {
+    background: var(--card-gradient);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(var(--border));
+    box-shadow: var(--shadow-glow), inset 0 1px 0 hsl(120 100% 50% / 0.1);
+    position: relative;
+  }
+
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--terminal-gradient);
+    animation: scanLine 3s linear infinite;
+  }
+
+  @keyframes scanLine {
+    0%, 100% { opacity: 0; transform: translateX(-100%); }
+    50% { opacity: 1; transform: translateX(100%); }
+  }
+
+  /* Terminal Text Effect */
+  .terminal-text {
+    font-family: 'Courier New', monospace;
+    color: hsl(var(--primary));
+    text-shadow: 0 0 10px currentColor;
+  }
+
+  /* Holographic Float */
+  .float-animation {
+    animation: holoFloat 4s ease-in-out infinite;
+  }
+
+  @keyframes holoFloat {
+    0%, 100% {
+      transform: translateY(0px) rotateX(0deg);
+      filter: hue-rotate(0deg);
+    }
+    50% {
+      transform: translateY(-15px) rotateX(5deg);
+      filter: hue-rotate(90deg);
+    }
+  }
+
+  /* Digital Glitch Fade */
+  .fade-in {
+    animation: digitalFadeIn 1s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes digitalFadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.9);
+      filter: blur(10px);
+    }
+    70% {
+      filter: blur(2px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  /* Matrix Slide In */
+  .slide-in {
+    animation: matrixSlide 1.2s ease-out forwards;
+    opacity: 0;
+  }
+
+  @keyframes matrixSlide {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px) skewX(-10deg);
+      filter: brightness(2) hue-rotate(90deg);
+    }
+    60% {
+      filter: brightness(1.2) hue-rotate(20deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0) skewX(0deg);
+      filter: brightness(1) hue-rotate(0deg);
+    }
+  }
+
+  /* Neon Button Pulse */
+  .neon-pulse {
+    animation: neonPulse 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes neonPulse {
+    from {
+      box-shadow: var(--shadow-medium);
+      border-color: hsl(var(--primary) / 0.5);
+    }
+    to {
+      box-shadow: var(--shadow-glow);
+      border-color: hsl(var(--primary));
+    }
+  }
+
+  /* Circuit Board Pattern */
+  .circuit-bg {
+    background-image: 
+      linear-gradient(90deg, hsl(120 100% 50% / 0.1) 1px, transparent 1px),
+      linear-gradient(hsl(120 100% 50% / 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    animation: circuitFlow 20s linear infinite;
+  }
+
+  @keyframes circuitFlow {
+    0% { background-position: 0 0; }
+    100% { background-position: 20px 20px; }
+  }
+
+  /* Data Stream Effect */
+  .data-stream {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .data-stream::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, hsl(120 100% 50% / 0.3), transparent);
+    animation: dataFlow 3s infinite;
+  }
+
+  @keyframes dataFlow {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(300%); }
+  }
+}
